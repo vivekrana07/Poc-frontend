@@ -1,0 +1,35 @@
+.text{
+    color: #3DCFD3;
+    margin-bottom: 3rem;
+}
+.text2{
+    color:White;
+}
+.container{
+    margin-top: 11%;
+    padding-left:35%;
+}
+.btn-primary:hover{
+    background: transparent;
+    border-color: #3DCFD3;
+    color:#3DCFD3;
+}
+.btn-primary{
+    background: #3DCFD3;
+    color: black;
+    margin-left: 3rem;
+    width:6rem;
+}
+
+.btn-primaryy{
+    background: transparent;
+    border-color: #3DCFD3;
+    color:#3DCFD3;
+    margin-left: 12rem;
+    width:6rem;
+    margin-top: -7.5rem;
+}
+.btn-primaryy:hover{
+    background: #3DCFD3;
+    color: black;
+}

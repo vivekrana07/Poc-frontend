@@ -1,0 +1,34 @@
+.text{
+    color: #3DCFD3;
+}
+.text2{
+    color:White;
+}
+.heading{
+    color:white;
+    
+}
+.heading2{
+    color:#3DCFD3;
+}
+.container{
+    margin-left: 30%;
+    margin-top: -2%;
+}
+
+.btn-primary{
+    background: transparent;
+    border-color: #3DCFD3;
+    color:#3DCFD3;
+    margin-left: 11rem;
+    width:6rem;
+    margin-top: -2%;
+}
+.btn-primary:hover{
+    background: #3DCFD3;
+    color: black;
+}
+
+.container1{
+    margin-left: 10%;
+}

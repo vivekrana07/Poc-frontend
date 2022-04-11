@@ -1,0 +1,29 @@
+<div class="row">
+    <br>
+    <h2 style="padding-left:50px;margin-top: 30px;color: white;margin-top: 5%;">Your <span style="color:#3DCFD3">Orders</span></h2>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+        <table  width="100%" style="margin-top: 2%;">
+            <tr>
+                <th style="color:#3DCFD3"><h4>Name</h4></th>
+                <th style="color:#3DCFD3"><h4>Price/item</h4></th>
+                <th style="color:#3DCFD3"><h4>Description</h4></th>
+                <th style="color:#3DCFD3"><h4>Quantity</h4></th>
+                <th style="color:#3DCFD3"><h4>Price</h4></th>
+            </tr>
+            <tr *ngFor="let od of ord">
+                <td style="color:white">{{od.name}}</td>
+                <td style="color:white">{{od.price | currency :'INR'}}</td>
+                <td style="color:white">{{od.description}}</td>
+                <td style="color:white">{{od.quantity}}</td>
+                <td style="color:white">{{od.quantity*od.price | currency :'INR'}}</td>
+
+            </tr>
+        </table>
+        <button class="btn btn-primary" (click)="checkout()" >Checkout</button>
+    </div>
+</div>
+

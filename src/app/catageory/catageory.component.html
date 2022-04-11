@@ -1,0 +1,51 @@
+<!-- <div class="row">
+    <br>
+    <h2 style="padding-left:50px;margin-top: 30px;">Catageory</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+        <table  width="100%">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            <tr *ngFor="let ctgy of ctgylist">
+                <td>{{ctgy.name}}</td>
+                <td>{{ctgy.description}}</td>
+                <td>{{ctgy.image}}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="Dishesop(ctgy.id)" >View</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div> -->
+
+
+
+<div class="row">
+    <br>
+    <h2 style="padding-left: 50px;color:white;margin-top: 4%;">Catageory <span style="color:#3DCFD3">List</span></h2>
+</div>
+
+
+<div class="row">
+    <div class="col-md-3" *ngFor="let ctgy of ctgylist">
+        <div class="card border border-info" style="width:150px;background-color: black;margin-left: 10%;height:230px;margin-top: 4rem;">
+            <div class="card-body" style="margin-top: -10%;" >
+                <h4 class="card-title" style="color: #3DCFD3;">{{ctgy.name}}</h4>
+                <img [src]="ctgy.image" width="120" height="150" >
+                <p class="card-text" style="color:white">{{ctgy.description}}</p>
+                <div>
+                    <button  class="btn btn-primary" (click)="Dishesop(ctgy.id)" >View</button>
+                </div>
+                <div>
+                    <button *ngIf="usr.isadmin" class="btn btn-primaryy" (click)="Delete(ctgy.id)" >Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

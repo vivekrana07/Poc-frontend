@@ -1,0 +1,31 @@
+<div class="row" style="margin-top: 5%;margin-left: 5%;">
+    <h1 style="padding-left: 50px;color:#3DCFD3;"><span style="color:white;">Add</span> Catagery</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-5" style="margin-top: 3%;margin-left: 12%;">
+        <form [formGroup]="addform">
+            <div class="form-group">
+               <h2 style="color:#3DCFD3;">Name :</h2>
+                <input type="text" formControlName="Name" class="form-control">
+            </div>
+            <div class="form-group">
+                <h2 style="color:#3DCFD3;"> Description :</h2>
+                <input type="text" formControlName="Description" class="form-control">
+            </div>
+            <div class="form-group">
+                <h2 style="color:#3DCFD3;"> Image :</h2>
+                <input type="file" class="form-control" (change)="onSelectFile($event)" >
+            </div>
+            
+            <div class="form-group">
+                <br>
+                <button class="btn btn-primary" (click)="addctg()"><h4>Add</h4></button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+    
+</div>
+

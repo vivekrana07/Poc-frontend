@@ -1,0 +1,46 @@
+<div class="row" style="margin-top: 3%;margin-left: 2%;">
+    <h1 style="padding-left: 50px;color:#3DCFD3;"><span style="color:white;">Add</span>Dishes</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-5" style="margin-top: -2%;margin-left: 12%">
+        <form [formGroup]="dishform">
+            <div class="form-group">
+                <h3 style="color:#3DCFD3;">Name :</h3>
+                <input type="text" formControlName="name" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <h3 style="color:#3DCFD3;"> Price :</h3>
+                <input type="text" formControlName="price" class="form-control">
+            </div>
+            <div class="form-group">
+                <h3 style="color:#3DCFD3;"> Description :</h3>
+                <input type="text" formControlName="description" class="form-control">
+            </div>
+            <div class="form-group">
+                <h3 style="color:#3DCFD3;">  Image :</h3>
+                <input type="file" class="form-control" (change)="onSelectFile($event)" >
+            </div>
+            <div class="form-group ">
+                <h3 style="color:#3DCFD3;"> Catagery id :</h3>
+                <!-- <input type="text" formControlName="ctgid" class="form-control"> -->
+                <select #ctgid (change)="update($event)">
+                  <option value="default">Catagery</option>
+                  <option *ngFor="let lt of ctgylist" [value]="lt.id">
+                      {{lt.name}}
+                  </option>
+                </select>
+            </div>
+           
+            <div class="form-group">
+                <br>
+                <button class="btn btn-primary" (click)="adddish()"><h5>Add</h5></button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+    
+</div>
+

@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <img width="100%" height="150px" src="../assets/banner.jpg" style="margin:0;padding:0;">
+  </div>
+
+
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" routerLink='/Home'>Home</a>
+            <a *ngIf="usr.isadmin && !usr.isLogin" class="nav-link" routerLink='/add-catageory'>AddCatageory</a>
+            <a *ngIf="usr.isadmin && !usr.isLogin" class="nav-link" routerLink='/add-dishes'>AddDishes</a>
+            <a *ngIf="usr.isLogin" class="nav-link" routerLink='/catageory'>Order</a>
+            <a *ngIf="usr.isadmin && !usr.isLogin" class="nav-link" routerLink='/catageory'>List</a>
+            <!-- <a class="nav-link" routerLink='/dishes'>Dishes</a> -->
+          </div>
+        </div>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a *ngIf="!usr.isLogin && !usr.isadmin" class="nav-link" routerLink='/log-in'>Login</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="!usr.isLogin && !usr.isadmin" class="nav-link" routerLink='/sign-up'>SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="usr.isLogin || usr.isadmin" class="nav-link" routerLink='/profile'>Profile</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="usr.isLogin || usr.isadmin" class="nav-link" routeLink='/Home' (click)="logOff()">Log Off</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+
+
+  <div class="row" style="height: 533px; vertical-align: top;">
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+
+  <div class="row" style="background-color: black;color: white">
+    <marquee><b> VR Resturant - Order online and Get Food at your Doorsteps</b></marquee>
+  </div>
+</div>

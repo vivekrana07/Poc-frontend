@@ -1,0 +1,45 @@
+<div class="container1">
+    <h3 class="heading">Sign<span class="heading2">Up</span></h3>
+</div>
+
+<div class="container">
+    
+    <div class="col-md-5">
+        <form [formGroup]="signupform">
+            <div class="form-group">
+               <h6 class="text">First Name :</h6>
+                <input type="text" formControlName="FirstName" class="form-control">
+            </div>
+            <div class="form-group">
+                <h6 class="text"> Last Name :</h6>
+                <input type="text" formControlName="LastName" class="form-control">
+            </div>
+            <div class="form-group">
+                <h6 class="text"> EmailAddress :</h6>
+                <input type="text" formControlName="EmailAddress" class="form-control">
+            </div>
+            <div class="form-group">
+                <h6 class="text">  Mobile :</h6>
+                <input type="text" formControlName="Mobile" class="form-control">
+            </div>
+            <div class="form-group">
+                <h6 class="text">   Password :</h6>
+                <input type="text" formControlName="Password" class="form-control">
+            </div>
+            <div class="form-group">
+                <h6 class="text">  Address :</h6>
+                <input type="text" formControlName="Address" class="form-control">
+            </div>
+            <div class="form-group">
+                <h2 style="color:#3DCFD3;"> Image :</h2>
+                <input type="file" class="form-control" (change)="onSelectFile($event)" >
+            </div>
+            <div class="form-group">
+                <br>
+                <button class="btn btn-primary" (click)="Signup()"><h6>SignUp</h6></button>
+            </div>
+        </form>
+    </div>
+    
+</div>
+

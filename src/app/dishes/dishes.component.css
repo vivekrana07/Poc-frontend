@@ -1,0 +1,26 @@
+.btn-primary{
+    background: transparent;
+    border-color: #3DCFD3;
+    color:#3DCFD3;
+    margin-left: 7%;
+    margin-top: 7%;
+    width:7rem;
+}
+.btn-primary:hover{
+    background: #3DCFD3;
+    color: black;
+}
+
+
+.btn-primaryy:hover{
+    background: transparent;
+    border-color: #3DCFD3;
+    color:#3DCFD3;
+}
+.btn-primaryy{
+    background: #3DCFD3;
+    color: black;
+    margin-left: 85%;
+    margin-top: 12%;
+    width:9rem;
+}
